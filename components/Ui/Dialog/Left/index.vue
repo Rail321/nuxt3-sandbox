@@ -1,6 +1,6 @@
 <template>
   <div v-show="modelValue">
-    <ui-overlay>
+    <ui-overlay-red>
       <div class="wrapper">
         <div class="body">
           <ui-dialog-body v-bind:modelValue="modelValue" v-on:update:modelValue="emit( 'update:modelValue', $event )">
@@ -8,7 +8,7 @@
           </ui-dialog-body>
         </div>
       </div>
-    </ui-overlay>
+    </ui-overlay-red>
   </div>
 </template>
 
@@ -21,7 +21,7 @@
 
 <script setup>
   import { defineProps, defineEmits } from 'vue'
-  import UiOverlay from '@/components/Ui/Overlay'
+  import UiOverlayRed from '@/components/Ui/Overlay/Red'
   import UiDialogBody from '@/components/Ui/DialogBody'
 
   defineProps( {
@@ -39,7 +39,7 @@
     height: 100%;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: flex-start;
   }
   
   .body {
