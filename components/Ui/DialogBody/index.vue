@@ -44,3 +44,10 @@
 
   const onDialogBodyBlur = () => emit( 'update:modelValue', false )
 </script>
+
+<style scoped>
+  .dialog-body {
+    width: 100%;
+    height: 100%;
+  }
+</style>
